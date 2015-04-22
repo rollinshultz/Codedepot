@@ -21,9 +21,15 @@ namespace codedepot.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("CodedepotDb", throwIfV1Schema: false)
+            : base("CDDB", throwIfV1Schema: false)
         {
         }
+
+        public DbSet<Code> snippets { get; set; }
+        public DbSet<Article> articles { get; set; }
+        public DbSet<Comment> comments { get; set; }
+        public DbSet<Forum> forums { get; set; }
+        public DbSet<Portfolio> portfolios { get; set; }
 
         public static ApplicationDbContext Create()
         {

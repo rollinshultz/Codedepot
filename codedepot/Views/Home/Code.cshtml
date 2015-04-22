@@ -1,0 +1,35 @@
+﻿@model codedepot.Models.Code
+
+@{
+    Layout = "~/Views/Shared/_SideNavLayout.cshtml";
+}
+
+<script src="~/lib/sound-mouseover.js"></script>
+<script >
+    function playclip() {
+        if (navigator.appName == "Microsoft Internet Explorer") {
+            if (document.all) {
+                document.all.sound.src = "~/sounds/click.wav";
+            }
+        }
+
+        else {
+            {
+                var audio = document.getElementsByTagName("audio")[0];
+                audio.play();
+            }
+        }
+    }
+</script>
+
+<div class="jumbotron">
+    <h1>Code Repository</h1>
+    <p class="lead">Share your code, classes, libraries, applications, and snippets.</p>
+    
+</div>
+
+    
+
+
+
+

@@ -1,0 +1,96 @@
+﻿@Model codedepot.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Code Snippets</title>
+
+    <link rel="stylesheet" href="~/Content/mybootstrap.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <script>
+
+    </script>
+</head>
+<body class="modal-backdrop">
+    <div class="navbar menu-bar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header menu-bar">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Code Depot", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse menu-bar">
+                <ul class="nav navbar-nav menu-bar">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Articles", "Articles", "Home")</li>
+                    <li>@Html.ActionLink("Code", "Code", "Home")</li>
+                    <li>@Html.ActionLink("Tutorials", "Tutorials", "Home")</li>
+                    <li>@Html.ActionLink("Portfolios", "Portfolios", "Home")</li>
+                    <li>@Html.ActionLink("Forum", "Forum", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    <div class="container">
+        <aside class="leftNav">
+            <audio>
+                <source src="~/sounds/click.mp3"></>
+                <source src="~/sounds/click.ogg"></>
+            </audio>
+            <ul class="asideLinks">
+                <li class="asideLinks">@Html.ActionLink("Amiga E", "Amiga E", "Code") </li>
+
+                <li onmouseover="playclip();">@Html.ActionLink("ADO.Net", "ADO.Net", "Code")</li>
+                <li onmouseover="playclip();">@Html.ActionLink("Apple Script", "Apple Script", "Code")</li>
+                <li onmouseover="playclip();">@Html.ActionLink("ASP.Net", "ASP.Net", "Code")</li>
+                <li onmouseover="playclip();">@Html.ActionLink("Java", "Java", "Code")</li>
+                <li onmouseover="playclip();">@Html.ActionLink("Batch", "Batch", "Code")</li>
+                <li onmouseover="playclip();">@Html.ActionLink("C", "C", "Code")</li>
+                <li onmouseover="playclip();">@Html.ActionLink("C++", "C++", "Code")</li>
+                <li onmouseover="playclip();">@Html.ActionLink("C#", "C#", "Code")</li>
+                <li onmouseover="playclip();">@Html.ActionLink("#", "#", "Code")</li>
+            </ul>
+        </aside>
+        <div class="table">
+            <section class="col-md-10 text-right">
+                @Html.DropDownList("SortBy", new List<SelectListItem> {
+                new SelectListItem { Text="relevance", Value = "relevance"},
+                new SelectListItem { Text="author", Value = "author"},
+                new SelectListItem { Text="most recent", Value = "most recent"},
+                new SelectListItem { Text="rating", Value = "rating"}}, "most recent")
+            </section>
+        </div>
+
+        <div class="PageContent">
+            @RenderPage("GeneralContent.cshtml")
+        </div>
+    </div>
+    <div></div>
+
+    <div class="container body-content">
+        
+            <hr />
+        <footer class="text-inverse">
+            <p>&copy; @DateTime.Now.Year - The Code Depot</p>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/js/jquery.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.js"></script>
+    <script src="~/lib/sound-mouseover.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

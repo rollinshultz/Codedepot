@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace codedepot.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -15,14 +16,28 @@ namespace codedepot.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "What is the Codedepot and what can it do for you?";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "You can contact us through the email app below.";
+
+            return View();
+        }
+
+        public ActionResult Code()
+        {
+            ViewBag.Message = "Share your code, classes, libraries, and snippets.";
+
+            return View();
+        }
+
+        public ActionResult Tutorials()
+        {
+            ViewBag.Message = "Learn how to program or help others learn.";
 
             return View();
         }

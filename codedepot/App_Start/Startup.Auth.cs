@@ -54,15 +54,15 @@ namespace codedepot
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "740475382716827",
+               appSecret: "f326ad851689c4435b44b4188f6a06ba");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "5837423524-j4ldqsbdj8gjupuqhjbbl7a5fl1iguh0.apps.googleusercontent.com",
+                ClientSecret = "vz4zhND97b7eN_a1R24VRDiK"
+            });
         }
     }
 }
