@@ -11,8 +11,11 @@ namespace codedepot.Models
         [Key]
         public int articleID { get; set; }
         public string articleTitle { get; set; }
-        public string articleDescriprion { get; set; }
+        public string articleDescription { get; set; }
         public string articlePath { get; set; }
         public string author { get; set; }
+        public DateTime date { get; set; }
+        public decimal rating { get; set; }
+        public string language { get; set; }
     }
 }

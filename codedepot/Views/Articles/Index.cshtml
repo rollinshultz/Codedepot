@@ -1,0 +1,52 @@
+﻿@model IEnumerable<codedepot.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ContentLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.articleTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.articleDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.articlePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.author)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.articleTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.articleDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.articlePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.author)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.articleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.articleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.articleID })
+        </td>
+    </tr>
+}
+
+</table>

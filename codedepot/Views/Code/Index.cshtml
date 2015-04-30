@@ -1,0 +1,70 @@
+﻿@model IEnumerable<codedepot.Models.Code>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SideNavLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.snippetTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.snippetDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.snippetPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.language)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rating)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.snippetTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.snippetDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.snippetPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rating)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.snippetID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.snippetID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.snippetID })
+        </td>
+    </tr>
+}
+
+</table>

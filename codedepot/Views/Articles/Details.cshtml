@@ -1,0 +1,51 @@
+﻿@model codedepot.Models.Article
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Article</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.articleTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.articleTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.articleDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.articleDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.articlePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.articlePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.author)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.articleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

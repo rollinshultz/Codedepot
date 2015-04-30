@@ -1,4 +1,4 @@
-﻿@model IEnumerable<codedepot.Models.Code>
+﻿@model IEnumerable<codedepot.Models.Article>
 @{
     Layout = "_ContentLayout.cshtml";
 }
@@ -14,22 +14,22 @@
 </head>
 <body>
     <div class="pagecontent col-lg-11">
-    @foreach (var snippet in Model)
+    @foreach (var article in Model)
     {
         <table class="jumbotron2 ">
             <tr>
-                <td colspan="3" class="col-md-10 text-center">Language: @snippet.language</td>
+                <td colspan="3" class="col-md-10">@article.language</td>
             </tr>
             <tr>
-                <td colspan="3" class="col-md-10">Title: @snippet.snippetTitle</td>
+                <td colspan="3" class="col-md-10">@article.articleTitle</td>
             </tr>
             <tr>
-                <td class="col-md-2">Rating: @snippet.rating</td>
-                <td class="text-left">Author: @snippet.author</td>
-                <td class="col-md-2">Date: @snippet.date</td>
+                <td class="col-md-2">@article.rating</td>
+                <td class="text-left">@article.author</td>
+                <td class="col-md-2">@article.date</td>
             </tr>
             <tr>
-                <td colspan="3" class="col-md-10">Description: @snippet.snippetDescription</td>
+                <td colspan="3" class="col-md-10">@article.articleDescription</td>
             </tr>
         </table>
     }
