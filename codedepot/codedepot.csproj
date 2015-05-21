@@ -167,19 +167,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201502230319471_InitialCreate.cs" />
-    <Compile Include="Migrations\201502230319471_InitialCreate.Designer.cs">
-      <DependentUpon>201502230319471_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503161617169_username.cs" />
-    <Compile Include="Migrations\201503161617169_username.Designer.cs">
-      <DependentUpon>201503161617169_username.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504251430552_sync.cs" />
-    <Compile Include="Migrations\201504251430552_sync.Designer.cs">
-      <DependentUpon>201504251430552_sync.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Code.cs" />
@@ -266,19 +253,8 @@
     <Content Include="Views\Articles\Details.cshtml" />
     <Content Include="Views\Articles\Edit.cshtml" />
     <Content Include="Views\Articles\Index.cshtml" />
-    <Content Include="Views\Articles\GeneralContent.cshtml" />
+    <Content Include="Views\Articles\ArticleContent.cshtml" />
     <Content Include="Views\Code\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201502230319471_InitialCreate.resx">
-      <DependentUpon>201502230319471_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503161617169_username.resx">
-      <DependentUpon>201503161617169_username.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504251430552_sync.resx">
-      <DependentUpon>201504251430552_sync.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

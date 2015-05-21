@@ -46,7 +46,7 @@ namespace codedepot.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "articleID,articleTitle,articleDescriprion,articlePath,author")] Article article)
+        public ActionResult Create([Bind(Include = "articleID,articleTitle,articleDescription,articlePath,author")] Article article)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace codedepot.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "articleID,articleTitle,articleDescriprion,articlePath,author")] Article article)
+        public ActionResult Edit([Bind(Include = "articleID,articleTitle,articleDescription,articlePath,author")] Article article)
         {
             if (ModelState.IsValid)
             {

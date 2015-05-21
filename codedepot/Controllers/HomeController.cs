@@ -35,21 +35,33 @@ namespace codedepot.Controllers
 
             ViewBag.Message = "Share your code, classes, libraries, and snippets.";
 
-            return View();
+            return RedirectToAction("Index", "Code");
         }
 
         public ActionResult Articles()
         {
             ViewBag.Message = "Read and Post articels to learn and share knowledge.";
 
-            return View();
+            return RedirectToAction("Index", "Articles");
         }
 
         public ActionResult Tutorials()
         {
             ViewBag.Message = "Learn how to program or help others learn.";
 
-            return View();
+            return RedirectToAction("Index", "Tutorials");
+        }
+        public ActionResult Portfolios()
+        {
+            ViewBag.Message = "Learn how to program or help others learn.";
+
+            return RedirectToAction("Index", "Portfolios");
+        }
+        public ActionResult Forum()
+        {
+            ViewBag.Message = "Learn how to program or help others learn.";
+
+            return RedirectToAction("Index", "Forum");
         }
     }
 }

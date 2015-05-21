@@ -17,6 +17,6 @@ namespace codedepot.Models
         public string snippetPath { get; set; }
         public string language { get; set; }
         public decimal rating { get; set; }
-        public List<Code> snippets { get; set; }
+        
     }
 }
